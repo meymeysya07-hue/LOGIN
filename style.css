@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1d1b2e;
+  background-color: #fbfaf7;
+}
+
+/* -- layout -- */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* -- kolom kiri -- */
+.left {
+  position: relative;
+  height: 180px;
+  padding: 20px 24px;
+  color: white;
+  background-color: #0a0343;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fffefc;
+  position: relative;
+  z-index: 2;
+}
+
+.caption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+.caption h1 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.caption p {
+  display: none;
+}
+
+/* -- kolom kanan -- */
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 24px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  color: #5a5870;
+}
+
+/* tombol google */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1d1b2e;
+  background-color: white;
+  border: 1px solid #8a87a0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* garis "or" */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #5a5870;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #cfcde0;
+}
+
+/* form */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #8a87a0;
+  border-radius: 8px;
+}
+
+/* label password dan link forgot */
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.forgot {
+  font-size: 14px;
+  color: #4816d2;
+}
+
+/* remember me */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.remember label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+/* tombol sign in */
+.btn-login {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #4816d2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #4841d8;
+}
+
+/* -- tablet (768px ke atas) -- */
+@media (min-width: 768px) {
+  .left {
+    height: 260px;
+    padding: 28px 40px;
+  }
+
+  .caption {
+    left: 40px;
+    right: 40px;
+    bottom: 28px;
+  }
+
+  .caption h1 {
+    font-size: 28px;
+  }
+
+  .caption p {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+/* -- desktop (1024px ke atas): dua kolom -- */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 55%;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 56px;
+  }
+
+  .caption {
+    left: 56px;
+    right: 56px;
+    bottom: 60px;
+    max-width: 480px;
+  }
+
+  .caption h1 {
+    font-size: 38px;
+  }
+
+  .right {
+    width: 45%;
+    padding: 40px 60px;
+  }
+}

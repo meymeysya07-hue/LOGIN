@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <title>Sign - Bulan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- kolom video -->
+      <section class="left">
+        <video
+          class="background-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+        >
+          <source src="Meteor.mp4" type="video/mp4" />
+        </video>
+
+        <h2 class="logo">Bulan</h2>
+
+        <div class="caption">
+          <h1>Setiap malam dimulai dari satu bintang langkah masuk.</h1>
+          <p>
+            Kelola proyek kreatifmu di satu tempat, kapan pun inspirasi datang.
+          </p>
+        </div>
+      </section>
+
+      <!-- kolom kanan form -->
+      <section class="right">
+        <div class="form-box">
+          <h2 class="title">Sign in to Bulan</h2>
+          <p class="subtitle">Belum punya akun? <a href="#">Sign up</a></p>
+
+          <!-- tombol google -->
+          <button type="button" class="btn-google">
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            ></svg>
+            Sign in with Google
+          </button>
+
+          <div class="divider">
+            <span>or</span>
+          </div>
+
+          <form action="#" method="post">
+            <label for="email">Email or Username</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="nama@email.com"
+              required
+            />
+
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" class="forgot">Forgot Password?</a>
+            </div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Minimal 8 karakter"
+              minlength="8"
+              required
+            />
+
+            <div class="remember">
+              <input type="checkbox" id="remember" name="remember" />
+              <label for="remember">Remember Me</label>
+            </div>
+
+            <button type="submit" class="btn-login">Sign in</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
